@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 //     return Math.floor(Math.random()*16777215).toString(16);
 // }
 
-function Statistics({ title="empty", stats }) {
+function Statistics({ title, stats }) {
     return <section className={css.statistics}>
-        {title === "empty" ? "" : <h2 className={css.title}>{ title }</h2>}
+        {title && <h2 className={css.title}>{ title }</h2>}
 
         <ul className={css.statList}>
             {stats.map(stat => <li className={css.item} key={stat.id}>
